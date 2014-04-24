@@ -6,3 +6,5 @@ wynik <- cacheSolve(keszowaTestowaMatryca)
 identical(rozwiazanaTestowaMatryca,wynik)
 wynik <- cacheSolve(keszowaTestowaMatryca)
 identical(rozwiazanaTestowaMatryca,wynik)
+prawieJednoskotwaMacierz <- testowaMatryca %*% wynik
+prawieJednoskotwaMacierz
