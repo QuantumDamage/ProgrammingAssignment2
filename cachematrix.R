@@ -3,7 +3,13 @@
 
 makeCacheMatrix <- function(x = matrix()) {
   # Function makeCacheMatrix is receiving normal matrix and prepairing its
-  # cached version 
+  # cached version
+  #
+  # Args:
+  #   x: matrix
+  #
+  # Returns:
+  #   list containing four functions
   m <- NULL
   set <- function(y) {
     x <-- y
@@ -16,7 +22,16 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 cacheSolve <- function(x, ...) {
-  # Return a matrix that is the inverse of 'x'
+  # Function cacheSolve is function that returns cached value of matrix
+  # inversion or calculate it when cache is not availible
+  #
+  # Args:
+  #   x: cacheMatrix, result of makeCacheMatrix() function
+  #   ...: arguments passed to standard solve() function
+  #
+  # Returns:
+  #   if cache is availible returns this value, if not it calculates it and
+  #   then return it
   m <- x$getinverse()
   if (!is.null(m)) {
     message("getting cached data")

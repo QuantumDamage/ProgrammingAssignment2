@@ -1,3 +1,5 @@
+# ignore this file, it was just created for testing purposes
+
 testowaMatryca <- matrix(c(4,5,6,3,3,2,1,1,0),3,3)
 source("cachematrix.R")
 rozwiazanaTestowaMatryca <- solve(testowaMatryca)
